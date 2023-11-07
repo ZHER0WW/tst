@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 1%;
+}
+
+.game-skel {
+    width: 1024px;
+    height: 470px;
+    border-bottom: 15px solid rgb(161, 113, 23);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.perso-1 {
+    position: absolute;
+    bottom: 0px;
+    width: 100px;
+}
+
+.jump {
+    animation: jump-animation 500ms ease-out;
+}
+
+@keyframes jump-animation {
+    0% {
+        bottom: 7px;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 7px;
+    }
+}
+
+.monster-1 {
+    position: absolute;
+    bottom: -13px;
+    width: 100px;
+    right: -80px;
+    animation: monster-1-animation 2.2s infinite linear;
+}
+
+@keyframes monster-1-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.8.2);
+}
+
+.pause {
+    position: absolute;
+    border-radius: 5px;
+    right: 20px;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    background-image: url('arquivos/pause-button-png-24.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir todo o botão */
+    border: none; /* Remove a borda do botão, se desejar */
+    cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+    filter: opacity(70%);
+}
+
+.menu {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    bottom: -100%;
+    background-color: #111;
+    pointer-events: none;
+    position: relative;
+}
+
+.menu-animation {
+    animation: menu-animation 0.2s linear;
+    bottom: 0%;
+}
+
+@keyframes menu-animation {
+
+    from {
+        bottom: -100%;
+    }
+
+    to {
+        bottom: 0%;
+    }
+}
+
+.exit-menu-animation {
+    animation: exit-menu-animation 0.2s linear;
+}
+
+@keyframes exit-menu-animation {
+
+    from {
+        bottom: 0%;
+    }
+
+    to {
+        bottom: -100%;
+    }
+}
+
+.botoes-menu {
+    pointer-events: all;
+    height: 50px;
+    width: 200px;
+    
+}
+
